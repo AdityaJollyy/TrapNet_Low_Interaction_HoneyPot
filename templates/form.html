@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Feedback Form</h1>
+        <form id="feedback-form" action="/submit" method="post">
+            <label for="dtx000">Customer ID:</label>
+            <input type="text" id="dtx000" name="dtx000" required>
+            <label for="dtx001">Name:</label>
+            <input type="text" id="dtx001" name="dtx001" required>
+            <label for="dtx010">How would you rate our service?</label>
+            <select id="dtx010" name="dtx010" required>
+                <option value="">--Please choose an option--</option>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select>
+            <label for="dtx011">Phone Number:</label>
+            <input type="tel" id="dtx011" name="dtx011" required>
+            <label for="dtx100">Email:</label>
+            <input type="email" id="dtx100" name="dtx100" required>
+            <label for="dtx101">Review :</label>
+            <textarea id="review" name="dtx101" rows="4" required></textarea>
+            <label class="hpot" for="id"></label>
+            <input class="hpot" type="text" id="id" name="id" autocomplete="off" placeholder="ID">
+            <label class="hpot" for="name"></label>
+            <input class="hpot" type="text" id="name" name="name" autocomplete="off" placeholder="Name">
+            <label class="hpot" for="option"></label>
+            <input class="hpot" type="text" id="option" name="option" autocomplete="off" placeholder="Option">
+            <label class="hpot" for="phone"></label>
+            <input class="hpot" type="text" id="phone" name="phone" autocomplete="off" placeholder="Phone">
+            <label class="hpot" for="email"></label>
+            <input class="hpot" type="email" id="email" name="email" autocomplete="off" placeholder="Email">
+            <label class="hpot" for="review"></label>
+            <textarea class="hpot" id="review" name="review" rows="4" placeholder="Review"></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
